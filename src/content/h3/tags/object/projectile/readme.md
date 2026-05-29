@@ -26,9 +26,9 @@ If no collision is detected, the projectile is moved to its next position at the
 
 A projectile with sufficiently high velocity behaves like a hitscan, since it will be able to cross a playable space within a single tick, with the game being simulated at 60 ticks per second. Should the projectile not be fast enough to hitscan the playable space, leading on targets may be required.
 
-Projectiles receive a boost to the distance hitscanned on their spawn tick, this boost is very strong at low velocities such as 2, but as velocity increases the boost is reduced until it becomes negligible, like at 700.
+Projectiles receive a boost to the distance hitscanned on their spawn tick, around 0.2 world units of extra distance.
 
-Projectile vectors can be changed from all sources of [damage](~damage_effect) when a [collision model](~collision_model) is present by using the "instantaneous acceleration" value, this includes melee, explosions, normal rounds, and other projectiles colliding mid-air. When no collision is present only area of effect damage can effect projectiles
+Projectile vectors can be changed from all sources of [damage](~damage_effect) when a [collision model](~collision_model) is present by using the "instantaneous acceleration" value, this includes damage from melee, explosions and other projectiles (mid-air collision). When no collision is present only area of effect damage can effect projectile vectors.
 
 Introduced in H2, the _travels instantaneously_ flag is used extensively by many weapons and makes projectiles reach short range targets in a much smaller amount of time, requiring less leading.
 
@@ -66,7 +66,7 @@ Is it not currently understood what defines a floor from a wall or ceiling, so f
 
 | Detonation timer starts | Description
 |-------|----------
-| immediatly | The moment the projectile is created it's detonation timer begins counting down
+| immediately | The moment the projectile is created it's detonation timer begins counting down
 | after first bounce | Projectiles detonation timer counts down after first bounce off a floor
 | when at rest | Detonation timer begins counting down after the projectile comes to a full stop on a surface, timer does not stop if the projectile moves again after starting
 | after first bounce of any surface | Projectiles detonation timer counts down after first bounce off any surface

@@ -135,10 +135,10 @@ Using various commands we can visualize current AI actions, as well use visual i
 Common commands that may be helpful for generalized debugging.
 
 | Command | Type | Description
-|------| ----------
+|------| ------ | ------
 | ai_render_all_actors | boolean | Needed for further commands, also renders usable firing positions and current target firing position
 | ai_render_behavior_stack | boolean | Renders a vertical list of current AI behavior tree actions
-| ai_render_tracked_props | boolean | Renders the current scariness value this AI perceives from another unit (note this will render *all* units at once, so the value will be impossible to read if more than one AI is tracking a single target)
+| ai_render_tracked_props | boolean | Renders the current scariness value this AI perceives from another unit (note this will render *all* units *at once*, so the value will be impossible to read if more than one AI is tracking a single target)
 | ai_render_targets | boolean | Renders a line from AI units onto their current target (or where they *think* their target is)
 | ai_debug_emotions | boolean | Renders the current danger level this AI unit is experiencing
 | ai_render_shooting | boolean | Renders data about how the AI is using their current weapon, like accuracy and rate of fire
